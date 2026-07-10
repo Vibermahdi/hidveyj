@@ -57,6 +57,49 @@
     }
 
 }
+/* مخفی کردن منوی دسکتاپ */
+
+.nav{
+
+    display:none;
+
+}
+
+/* نمایش دکمه همبرگری */
+
+.menu-toggle{
+
+    display:flex !important;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+/* وقتی منو باز شد */
+
+.nav.active{
+
+    display:block;
+
+    position:fixed;
+
+    top:72px;
+
+    right:0;
+
+    width:280px;
+
+    height:calc(100vh - 72px);
+
+    background:#fff;
+
+    box-shadow:-10px 0 30px rgba(0,0,0,.08);
+
+    padding:30px;
+
+}
 
 /*==============================
         MOBILE HEADER
