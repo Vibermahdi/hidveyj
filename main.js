@@ -184,12 +184,10 @@ if (header) {
     if (window.scrollY > 80) {
 
         header.style.top = "8px";
-        header.classList.add("scrolled");
 
     } else {
 
         header.style.top = "20px";
-        header.classList.remove("scrolled");
 
     }
 
