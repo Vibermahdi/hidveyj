@@ -154,7 +154,39 @@ button{
 
 .nav-list a{
 
+    position:relative;
+
+    padding-bottom:8px;
+
+    text-decoration:none;
+
+    color:var(--text);
+
     transition:.3s;
+
+}
+
+.nav-list a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+
+    bottom:0;
+
+    width:0;
+
+    height:2px;
+
+    background:var(--primary);
+
+    border-radius:999px;
+
+    transform:translateX(-50%);
+
+    transition:.3s ease;
 
 }
 
@@ -1219,7 +1251,9 @@ border: 1px solid rgba(255,255,255,.45);
 
 }
 
-}body::before,
+}
+
+body::before,
 body::after{
 
     content:"";
@@ -1246,7 +1280,7 @@ body::before{
 
     right:-120px;
 
-    background:#8DB6D9;
+    background:#f4f4f4;
 
 }
 
@@ -1256,7 +1290,7 @@ body::after{
 
     left:-150px;
 
-    background:#d8ecff;
+    background:#ffffff;
 
 }
 
@@ -1302,9 +1336,9 @@ body::after{
 
     display:inline-block;
 
-    padding:100px 0;
+    padding:10px 22px;
 
-    border-radius:50px;
+    border-radius:999px;
 
     background:#e9f4ff;
 
