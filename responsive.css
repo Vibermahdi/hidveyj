@@ -765,3 +765,299 @@
     }
 
 }
+
+/*======================================
+            ARTICLES
+======================================*/
+
+@media (max-width:992px){
+
+    .articles{
+
+        padding:100px 0;
+
+    }
+
+    .articles-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+        gap:28px;
+
+    }
+
+}
+
+@media (max-width:768px){
+
+    .articles{
+
+        padding:80px 0;
+
+    }
+
+    .articles-grid{
+
+        grid-template-columns:1fr;
+
+        gap:24px;
+
+    }
+
+    .article-card{
+
+        border-radius:24px;
+
+        overflow:hidden;
+
+    }
+
+    .article-content{
+
+        padding:28px;
+
+    }
+
+    .article-content h3{
+
+        font-size:22px;
+
+        line-height:1.6;
+
+    }
+
+    .article-content p{
+
+        font-size:15px;
+
+    }
+
+}
+
+@media (max-width:480px){
+
+    .article-content{
+
+        padding:22px;
+
+    }
+
+    .article-content h3{
+
+        font-size:20px;
+
+    }
+
+}
+
+/*======================================
+                FAQ
+======================================*/
+
+@media (max-width:768px){
+
+    .faq{
+
+        padding:80px 0;
+
+    }
+
+    .faq-container{
+
+        width:100%;
+
+    }
+
+    .faq-item{
+
+        border-radius:20px;
+
+    }
+
+    .faq-question{
+
+        padding:22px;
+
+        font-size:17px;
+
+    }
+
+    .faq-answer{
+
+        font-size:15px;
+
+        line-height:2;
+
+    }
+
+}
+
+@media (max-width:480px){
+
+    .faq-question{
+
+        font-size:16px;
+
+        padding:18px;
+
+    }
+
+}
+
+/*======================================
+            CONTACT
+======================================*/
+
+@media (max-width:992px){
+
+    .contact{
+
+        padding:100px 0;
+
+    }
+
+    .contact-container{
+
+        grid-template-columns:1fr;
+
+        gap:50px;
+
+    }
+
+}
+
+@media (max-width:768px){
+
+    .contact{
+
+        padding:80px 0;
+
+    }
+
+    .contact-container{
+
+        gap:35px;
+
+    }
+
+    .contact-card{
+
+        padding:30px;
+
+    }
+
+    .contact-card h3{
+
+        font-size:24px;
+
+    }
+
+    .contact-card p{
+
+        font-size:15px;
+
+    }
+
+}
+
+@media (max-width:480px){
+
+    .contact-card{
+
+        padding:24px;
+
+    }
+
+}
+
+/*======================================
+                FOOTER
+======================================*/
+
+@media (max-width:768px){
+
+    footer{
+
+        text-align:center;
+
+    }
+
+    .footer-container{
+
+        display:flex;
+
+        flex-direction:column;
+
+        gap:25px;
+
+        align-items:center;
+
+    }
+
+    .footer-links{
+
+        flex-direction:column;
+
+        gap:16px;
+
+    }
+
+}
+
+/*======================================
+        FLOAT BUTTONS
+======================================*/
+
+@media (max-width:768px){
+
+    .back-top{
+
+        width:50px;
+
+        height:50px;
+
+        bottom:20px;
+
+        left:20px;
+
+    }
+
+    .consult-float{
+
+        right:20px;
+
+        bottom:20px;
+
+    }
+
+}
+
+@media (max-width:480px){
+
+    .back-top{
+
+        width:46px;
+
+        height:46px;
+
+    }
+
+    .consult-float{
+
+        transform:scale(.92);
+
+    }
+
+}
+
+/*======================================
+        IMAGE FIX
+======================================*/
+
+img{
+
+    max-width:100%;
+
+    height:auto;
+
+}
