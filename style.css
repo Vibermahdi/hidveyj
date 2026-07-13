@@ -45,12 +45,16 @@ body{
     color:var(--text);
     overflow-x:hidden;
     background:#f7fbff;
-overflow-x:hidden;
 }
 
 img{
+
     max-width:100%;
+
+    height:auto;
+
     display:block;
+
 }
 
 a{
@@ -317,15 +321,6 @@ button{
 
 }
 
-.hero-image img{
-
-    width:100%;
-
-    border-radius:32px;
-
-    box-shadow:var(--shadow);
-
-}
 
 /*==============================
       FLOATING CARDS
@@ -334,6 +329,16 @@ button{
 .hero-image{
 
     position:relative;
+
+}
+
+.hero-image img{
+
+    width:100%;
+
+    border-radius:32px;
+
+    box-shadow:var(--shadow);
 
 }
 
@@ -387,13 +392,57 @@ button{
 
     right:-35px;
 
-}/*==============================
+}
+
+.glass{
+
+    background:rgba(255,255,255,.72);
+
+    backdrop-filter:blur(18px);
+
+    -webkit-backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.45);
+
+}
+
+
+/*==============================
             ABOUT
 ===============================*/
 
 .about{
 
-    padding:120px 0;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.about::before{
+
+    content: "";
+
+    position: absolute;
+
+    width: 700px;
+
+    height: 120px;
+
+    top: 120px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    background: #8fdcff;
+
+    border-radius: 999px;
+
+    filter: blur(80px);
+
+    opacity: .18;
+
+    z-index: -1;
 
 }
 
@@ -421,21 +470,29 @@ button{
 
 .section-tag{
 
-    display:inline-block;
+    display: inline-flex;
 
-    padding:100px 0;
+    align-items: center;
 
-    background:#eef6fc;
+    justify-content: center;
 
-    color:var(--primary);
+    width: 150px;
 
-    border-radius:999px;
+    height: 48px;
 
-    font-size:14px;
+    padding: 0;
 
-    font-weight:600;
+    background: #eef8ff;
 
-    margin-bottom:20px;
+    color: var(--primary);
+
+    border-radius: 999px;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    margin-bottom: 24px;
 
 }
 
@@ -530,10 +587,8 @@ button{
 
     box-shadow:0 18px 40px rgba(0,0,0,.05);
 
-    background: rgba(255,255,255,.72);
-backdrop-filter: blur(18px);
--webkit-backdrop-filter: blur(18px);
-border: 1px solid rgba(255,255,255,.45);
+    -webkit-backdrop-filter: blur(18px);
+
 }
 
 .service-card:hover{
@@ -561,6 +616,8 @@ border: 1px solid rgba(255,255,255,.45);
 
     align-items:center;
 
+    transition:.35s;
+
 }
 
 .service-icon img{
@@ -571,23 +628,6 @@ border: 1px solid rgba(255,255,255,.45);
 
 }
 
-.contact-icon{
-
-    width:58px;
-
-    height:58px;
-
-    border-radius:18px;
-
-    background:#EDF6FD;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-}
 
 .contact-icon img{
 
@@ -802,11 +842,6 @@ border: 1px solid rgba(255,255,255,.45);
 
     transition:.35s;
 
-    background: rgba(255,255,255,.72);
-backdrop-filter: blur(18px);
--webkit-backdrop-filter: blur(18px);
-border: 1px solid rgba(255,255,255,.45);
-
 }
 
 .article-card:hover{
@@ -986,11 +1021,6 @@ border: 1px solid rgba(255,255,255,.45);
     box-shadow:var(--shadow);
 
     transition:.35s;
-
-    background: rgba(255,255,255,.72);
-backdrop-filter: blur(18px);
--webkit-backdrop-filter: blur(18px);
-border: 1px solid rgba(255,255,255,.45);
 
 }
 
@@ -1231,6 +1261,8 @@ border: 1px solid rgba(255,255,255,.45);
 
     transform:translateY(-6px);
 
+}
+
 .gallery-item{
 
     overflow:hidden;
@@ -1248,8 +1280,6 @@ border: 1px solid rgba(255,255,255,.45);
 .gallery-item:hover img{
 
     transform:scale(1.08);
-
-}
 
 }
 
@@ -1332,21 +1362,6 @@ body::after{
 
 }
 
-.section-tag{
-
-    display:inline-block;
-
-    padding:10px 22px;
-
-    border-radius:999px;
-
-    background:#e9f4ff;
-
-    color:var(--primary);
-
-    font-weight:600;
-
-}
 
 /*======================================
         SEARCH BOX
@@ -1396,15 +1411,6 @@ body::after{
 
 }
 
-.articles-grid{
-
-    display:grid;
-
-    grid-template-columns:repeat(3,1fr);
-
-    gap:35px;
-
-}
 
 /*======================================
             ICONS
@@ -1478,15 +1484,6 @@ body::after{
         SERVICES HOVER
 ======================================*/
 
-.service-card{
-
-    transition:.35s ease;
-
-    position:relative;
-
-    overflow:hidden;
-
-}
 
 .service-card::before{
 
@@ -1519,35 +1516,17 @@ body::after{
 
 }
 
-.service-card:hover{
-
-    transform:translateY(-12px);
-
-    box-shadow:0 30px 60px rgba(0,0,0,.12);
-
-}
-
 .service-card:hover .service-icon{
 
     transform:scale(1.08) rotate(5deg);
 
 }
 
-.service-icon{
-
-    transition:.35s;
-
-}
 
 /*======================================
         HEADER SCROLL
 ======================================*/
 
-.header{
-
-    transition:.35s ease;
-
-}
 
 .header.scrolled{
 
@@ -1624,13 +1603,4 @@ body::after{
 }
 
 
-img{
-
-    max-width:100%;
-
-    height:auto;
-
-    display:block;
-
-}
 
